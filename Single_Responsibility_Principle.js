@@ -37,6 +37,8 @@ j.add('I played football');
 j.add('I ran today.');
 console.log(j.toString());
 
+
+
 const p =new PersistenceManager();
 const filename = 'journal.txt'
 p.saveToFile(j, filename);
