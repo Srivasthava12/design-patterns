@@ -1,0 +1,23 @@
+{
+  "name": "design_work_space",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Single_Responsibility_Principle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Srivasthava12/design-patterns.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Srivasthava12/design-patterns/issues"
+  },
+  "homepage": "https://github.com/Srivasthava12/design-patterns#readme",
+  "devDependencies": {
+    "@types/node": "^18.8.3",
+    "typescript": "^4.8.4"
+  }
+}
