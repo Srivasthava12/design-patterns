@@ -1,19 +1,30 @@
-const fs = require('fs')
+import Logger from './Logger';
+import PersistenceManager from './PersistenceManager'
+
 
 
 class Journal {
     entries: any
     static count: any;
+    persistenceManager = new PersistenceManager()
+    logger= new Logger()
     constructor() {
         this.entries = []
     }
     add(txt:any) {
+
         const count = ++Journal.count;
         const entry = `${count}: ${txt}`;
         this.entries[count] = entry;
-        console.log("entry saved !");
-        fs.writeFileSync('journal.txt', this.toString());
-        console.log("Done !!");
+
+        /**Logger follows SRP */
+        this.logger.log("Entry Saved !!")
+
+        /**Seperation of concern */
+        this.persistenceManager.saveFile(this.toString(), 'journal.txt')
+
+        this.logger.log("DONE !!")
+
         return count
     }
     toString()
